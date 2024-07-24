@@ -102,6 +102,42 @@ h4{
   font-weight: bold;
 }
 
+.mmdvc{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.bgclrb{
+  background-color: #283273;
+}
+
+.frmcol{
+  display: flex;
+  flex-direction: column;
+}
+
+.dvrow{
+  display: flex;
+  flex-direction: row;
+  gap:16px;
+  align-items: center;
+}
+
+.clry{
+  color:#F29916;
+}
+
+.lttspc{
+  letter-spacing: 2px;
+}
+
+.ftwt{
+  font-weight: 600;
+}
+
 @media(max-width:1300px){
   .formgnr{
     padding: 16px 8px ;

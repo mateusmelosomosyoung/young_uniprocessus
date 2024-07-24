@@ -1,0 +1,37 @@
+.cttdfr{
+    max-width: 1200px;
+    padding: 64px 0;
+    display: flex;
+    flex-direction: row;
+    gap:32px;
+}
+
+.curso{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    font-size: 16px;
+}
+
+.txtprc{
+    color:white;
+}
+
+@media(max-width: 1000px){
+
+    .cttdfr{
+        max-width: 700px;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media(max-width: 700px){
+
+    .cttdfr{
+        max-width: 380px;
+    }
+
+}
