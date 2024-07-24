@@ -1,0 +1,56 @@
+.hdrd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('/img/header/banner2000.png');
+    background-size: cover; /* Para cobrir toda a área */
+    background-position: left center; /* Para centralizar a imagem */
+    min-width: 100%;
+    padding:4rem 0;
+    margin-top: 100px;
+    z-index: 1;
+    min-height: 650px;
+}
+
+@media(max-width: 600px){
+    .hdrd{
+        display: flex;
+        background-image: url('/img/header/banner600.png');
+        min-height:300px;
+    }
+    
+}
+
+@media(max-width: 1000px){
+    .hdrd{
+        display: flex;
+        background-image: url('/img/header/banner1000.png');
+    }
+    
+}
+
+
+@media(max-width: 1200px){
+    .hdrd{
+        display: flex;
+        background-image: url('/img/header/banner1200.png');
+    }
+    
+}
+
+@media(max-width: 1700px){
+    .hdrd{
+        display: flex;
+        background-image: url('/img/header/banner1440.png');
+    }
+    
+}
+
+@media(min-width: 1700px){
+    .hdrd{
+        display: flex;
+        background-image: url('/img/header/banner2000.png');
+    }
+    
+}

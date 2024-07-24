@@ -9,6 +9,7 @@
   min-height: 100px;
   background-color: #263471;
   color:white;
+  z-index: 2;
 }
 
 .cstimg{
@@ -112,7 +113,6 @@
 }
 @media(max-width: 1000px){
   .customnavbar {
-      min-height: 80px;
       padding:1rem 0;
   }
 
