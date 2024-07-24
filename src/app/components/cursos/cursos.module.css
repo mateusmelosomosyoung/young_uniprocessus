@@ -1,0 +1,65 @@
+.crsctt{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap:32px;
+    padding: 64px 0;
+    align-items: center;
+}
+
+.cttcards{
+    display: flex;
+    flex-direction: row;
+    gap:16px;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+
+.cardcrs{
+    padding:32px 16px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    align-items: flex-start;
+    justify-content:space-between;
+    color: #6E6E6E;
+    border: 1px solid #283273;
+    width: 280px;
+    border-radius: 8px;
+    max-width: 100%; /* Garante que a largura do card não ultrapasse a div pai */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+}
+
+.cardcrs h4 {
+    word-break: break-word; /* Quebra palavras longas para não ultrapassar a div */
+    overflow-wrap: break-word; /* Quebra palavras longas para não ultrapassar a div */
+    max-width: 300px;
+}
+.divitimg{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    align-items: center;
+}
+
+.cddcttwb{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
+
+.imgicon{
+    width: 20px;
+    height: 20px;
+    object-fit: contain; /* Preenche o contêiner mantendo a proporção da imagem */
+}
+
+@media(max-width:1000px){
+        
+    .cardcrs{
+        width: 340px;
+    }
+}

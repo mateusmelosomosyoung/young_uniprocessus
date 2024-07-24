@@ -59,6 +59,17 @@ h4{
   cursor:pointer;
 }
 
+.bttcard{
+  padding: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #F29916;
+  border-radius: 50px;
+  letter-spacing: 3px;
+  cursor:pointer;
+}
+
 .frg{
   display: flex;
   flex-direction: column;
@@ -130,12 +141,20 @@ h4{
   color:#F29916;
 }
 
+.clrb{
+  color:#283273;
+}
+
 .lttspc{
   letter-spacing: 2px;
 }
 
 .ftwt{
   font-weight: 600;
+}
+
+.ftsz14{
+  font-size: 14px;
 }
 
 @media(max-width:1300px){
