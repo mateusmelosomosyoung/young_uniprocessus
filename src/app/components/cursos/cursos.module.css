@@ -31,6 +31,7 @@
     border-radius: 8px;
     max-width: 100%; /* Garante que a largura do card não ultrapasse a div pai */
     box-sizing: border-box; /* Inclui padding e border no cálculo da largura total */
+    animation: fadeInUp 0.5s ease-out;
 }
 
 .cardcrs h4 {
@@ -38,6 +39,7 @@
     overflow-wrap: break-word; /* Quebra palavras longas para não ultrapassar a div */
     max-width: 300px;
 }
+
 .divitimg{
     display: flex;
     flex-direction: row;
@@ -63,3 +65,15 @@
         width: 340px;
     }
 }
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
