@@ -13,6 +13,23 @@
     min-height: 650px;
 }
 
+.internalctt{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.divfbt1{
+    display: none;
+}
+
+.imgocmnclose{
+    cursor:pointer;
+}
+
+
 @media(max-width: 600px){
     .hdrd{
         display: flex;
@@ -23,9 +40,20 @@
 }
 
 @media(max-width: 1000px){
+    .internalctt{
+        justify-content: center;
+        align-items: center;
+        max-width: 380px;
+    }
     .hdrd{
         display: flex;
         background-image: url('/img/header/banner1000.png');
+    }
+    
+    .divfbt1{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
     }
     
 }

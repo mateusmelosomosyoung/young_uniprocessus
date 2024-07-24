@@ -41,7 +41,7 @@ h2{
 }
 
 h3{
-
+  font-size: 36px;
 }
 
 h4{
@@ -57,4 +57,90 @@ h4{
   border-radius: 50px;
   letter-spacing: 5px;
   cursor:pointer;
+}
+
+.frg{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 16px;
+  color: #283273;
+  align-items: center;
+  padding:16px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.frg label {
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formgnr{
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  padding: 64px 32px ;
+  align-items: center;
+}
+
+.lblwbb{
+  border: 1px solid #283273;
+  padding: 14px;
+  border-radius: 8px;
+  min-width: 450px;
+  color:#283273;
+  font-weight: bolder;
+}
+
+.lblwbb::placeholder{
+  color: #283273;
+  padding: 8px 0 0 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media(max-width:1300px){
+  .formgnr{
+    padding: 16px 8px ;
+  }
+
+} 
+
+@media(max-width: 1000px){
+  h1{
+    font-size: 36px;
+  }
+  
+  h2{
+    font-size: 30px;
+  }
+  
+  h3{
+    font-size: 28px;
+  }
+  
+  h4{
+    font-size: 20px;
+  }
+  .formgnr{
+    gap:16px;
+  }
+  .lblwbb{
+    min-width: 350px;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
