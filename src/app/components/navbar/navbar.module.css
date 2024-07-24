@@ -121,6 +121,8 @@
       flex-direction: column;
       gap:2rem;
       align-items: flex-start;
+      padding: 16px 0;
+      animation: fadeInUp 1s ease-out;
   }
   .cstnvhmb {
       display: flex;
@@ -188,5 +190,18 @@
   .cstimg{
       width: 173px;
       height: 62px;
+  }
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
   }
 }
