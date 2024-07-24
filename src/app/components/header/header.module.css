@@ -44,6 +44,14 @@
         justify-content: center;
         align-items: center;
         max-width: 380px;
+        background-color: rgba(0, 0, 0, 0.8); /* Fundo 80% preto */
+        top: 10px; /* Posiciona 120px do topo */
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Ajusta a centralização */
+        width: 100%; /* Ajusta a largura para caber na tela com margem */
+        height: 100%;
+        min-width: 100%;
+        position: fixed;
     }
     .hdrd{
         display: flex;
