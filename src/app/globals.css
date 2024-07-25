@@ -32,6 +32,14 @@ html, body {
   overflow-x: hidden;
 }
 
+body {
+  font-family: Arial, sans-serif;
+}
+
+body.font-loaded {
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
 h1{
   font-size: 48px;
 }
