@@ -1,0 +1,53 @@
+.cttimg{
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:64px 0;
+}
+
+.bgdpl{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('/img/bgdiplomacao.png');
+    background-size: cover; /* Para cobrir toda a área */
+    background-position: left center; /* Para centralizar a imagem */
+    width: 100%;
+    z-index: 0;
+    height: 360px;
+}
+
+.dplcard{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    align-items: center;
+    background-color: #283273;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    padding:48px;
+    border-radius: 20px;
+    max-width: 600px;
+    min-height: 420px;
+    transform: translateX(45%);
+    margin:16px;
+}
+
+.formbl{
+    display: none;
+}
+
+
+@media(max-width:1000px){
+    .dplcard{
+        transform: translateX(0);
+        transform: translateY(450px);
+    }
+    .formbl{
+        display: flex;
+        height: 420px;
+    }
+}
