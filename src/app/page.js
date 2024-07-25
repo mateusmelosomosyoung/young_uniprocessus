@@ -8,6 +8,7 @@ import Ingressar from "./components/ingressar"
 import Diplomacao from "./components/diplomacao"
 import Modalidade from "./components/modalidade"
 import FooterModule from "./components/footer"
+import Contato from "./components/contato"
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Ingressar />
       <Diplomacao />
       <Modalidade />
+      <Contato />
       <FooterModule />
     </main>
   )

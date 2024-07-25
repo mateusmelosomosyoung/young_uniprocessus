@@ -131,6 +131,7 @@ h4{
   min-width: 450px;
   color:#283273;
   font-weight: bolder;
+  width: 100%;
 }
 
 .lblwbb::placeholder{

@@ -1,0 +1,20 @@
+.frmctt{
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    color: #263471;
+    padding: 0;
+}
+
+
+@media(max-width: 600px){
+    .frmctt{
+        max-width: 380px;
+    }
+}
+
+@media(max-width: 1000px){
+    .frmctt{
+        padding: 0 16px;
+    }
+}
