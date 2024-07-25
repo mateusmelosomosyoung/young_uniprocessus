@@ -177,6 +177,9 @@ h4{
   letter-spacing: 2px;
 }
 
+.ftwt700{
+  font-weight: 700;
+}
 .ftwt{
   font-weight: 600;
 }
@@ -187,6 +190,9 @@ h4{
   font-size: 20px;
 }
 
+.ftsz16{
+  font-size: 16px;
+}
 .ftsz14{
   font-size: 14px;
 }
