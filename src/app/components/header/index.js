@@ -24,4 +24,5 @@ const HeaderModule = () => {
     </>)
 }
 
+HeaderModule.displayName = 'HeaderModule'
 export default HeaderModule

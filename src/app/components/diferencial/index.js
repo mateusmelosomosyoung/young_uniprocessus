@@ -72,4 +72,5 @@ const Diferencial = () => {
     </>)
 }
 
+Diferencial.displayName = 'Diferencial'
 export default Diferencial

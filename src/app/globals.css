@@ -57,6 +57,7 @@ h4{
   border-radius: 50px;
   letter-spacing: 5px;
   cursor:pointer;
+  transition: background-color 0.6s ease;
 }
 
 .bttcard{
@@ -68,6 +69,24 @@ h4{
   border-radius: 50px;
   letter-spacing: 3px;
   cursor:pointer;
+  transition: background-color 0.6s ease; 
+}
+
+.bttpblue{
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #283273;
+  border-radius: 50px;
+  letter-spacing: 5px;
+  cursor:pointer;
+  transition: background-color 0.6s ease; 
+}
+
+
+.bttp:hover, .bttcard:hover, .bttpblue:hover{
+  filter: brightness(120%); /* Clareia a cor em 10% */
 }
 
 .frg{
@@ -127,6 +146,7 @@ h4{
 .frmcol{
   display: flex;
   flex-direction: column;
+  gap:8px;
 }
 
 .dvrow{
@@ -150,6 +170,12 @@ h4{
 
 .ftwt{
   font-weight: 600;
+}
+.ftsz24{
+  font-size: 24px;
+}
+.ftsz20{
+  font-size: 20px;
 }
 
 .ftsz14{

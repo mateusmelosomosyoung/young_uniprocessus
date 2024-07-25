@@ -60,4 +60,5 @@ const Navbar = ({ scrollToRef, sobreRef, investimentoRef, profsRef, contatoRef }
   )
 }
 
+Navbar.displayName = 'Navbar'
 export default Navbar

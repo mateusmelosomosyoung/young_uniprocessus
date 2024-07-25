@@ -1,0 +1,38 @@
+
+.cttigrs{
+    padding: 64px 0;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:64px;
+}
+
+.itctts{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:16px;
+    justify-content: center;
+}
+
+.cmngr{
+    width: 280px;
+    border:2px solid #283273;
+    border-radius: 8px;
+    padding:16px;
+}
+
+.iconigr{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+@media(max-width: 600px){
+    .cttigrs{
+        max-width: 380px;
+    }
+}

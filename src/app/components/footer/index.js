@@ -4,8 +4,11 @@ import styles from './footer.module.css'
 const FooterModule = () => {
 
     return (<>
-        Footer
+        <div>
+            Footer
+        </div>
     </>)
 }
 
+FooterModule.displayName = 'FooterModule'
 export default FooterModule

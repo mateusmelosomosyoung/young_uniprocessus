@@ -124,4 +124,5 @@ const Cursos = () => {
     </>)
 }
 
+Cursos.displayName = 'Cursos'
 export default Cursos
