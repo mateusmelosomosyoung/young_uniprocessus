@@ -15,12 +15,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <meta name="keywords" content="UniProcessus, Educação Superior, Cursos de Graduação, Pós-Graduação, Ensino a Distância, Ensino Presencial, Inscrição Universitária, Dupla Diplomação, Educação de Qualidade, Centro Universitário, Vagas Universitárias" />
-        <Script
-          id="google-tag-manager-script"
-          src="/googleTagManager.js"
-          strategy="afterInteractive"
-        />
+        
       </Head>
+      <head>
+        <Script
+            id="google-tag-manager-script"
+            src="/googleTagManager.js"
+            strategy="afterInteractive"
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
