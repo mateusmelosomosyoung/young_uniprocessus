@@ -124,21 +124,32 @@ h4{
   align-items: center;
 }
 
+.formgnr label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:8px;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+}
+
 .lblwbb{
   border: 1px solid #283273;
-  padding: 14px;
   border-radius: 8px;
   min-width: 450px;
+  padding: 0 2px 0 2px;
   color:#283273;
   font-weight: bolder;
   width: 100%;
   min-height: 50px;
   background: none;
+  font-size: 16px;
 }
 
 .lblwbb::placeholder{
   color: #283273;
-  padding: 8px 0 0 0;
+  padding: 4px;
   font-size: 16px;
 }
 
@@ -235,10 +246,14 @@ h4{
     gap:16px;
   }
   .lblwbb{
-    min-width: 350px;
+    min-width: 320px;
     height: 50px;
     min-height: 50px;
   }
+  .formgnr label{
+    font-size: 12px;
+  }
+  
 }
 
 

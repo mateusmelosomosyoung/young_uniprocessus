@@ -41,13 +41,23 @@
 }
 
 
+@media(max-width:600px){
+
+    .dplcard{
+        max-width: 350px;
+    }
+}
 @media(max-width:1000px){
+    .cttimg{
+        padding:0;
+    }
+
     .dplcard{
         transform: translateX(0);
-        transform: translateY(450px);
+        transform: translateY(350px);
     }
     .formbl{
         display: flex;
-        height: 420px;
+        height: 400px;
     }
 }

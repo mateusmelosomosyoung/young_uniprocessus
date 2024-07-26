@@ -37,13 +37,13 @@ const FooterModule = () => {
         <div className="mmdvc bgclrb">
             <div className={styles.footer}>
                 <div className={styles.cttfooter}>
-                    <Image src={'/marca/logo2.png'} alt='Uniprocessus Logo' className={styles.ftrimg} height={129}  width={313}/>
+                    <Image src={'/marca/logoG.svg'} alt='Uniprocessus Logo' className={styles.ftrimg} height={129}  width={313}/>
                     <div className={styles.ftcttcol}>
-                        <div className="frmcol">
+                        <div className={styles.frmcolpg}>
                             <p className="ftsz16 ftwt700">FALE COM A GENTE</p>
                             <p className="ftsz16">(61) 3142-5787</p>
                         </div>
-                        <div className="frmcol">
+                        <div className={styles.frmcolpg}>
                             <p className="ftsz16 ftwt700">CONHEÇA NOSSAS REDES SOCIAIS</p>
                             <div className="dvrow">
                                 {social.map((content, index) => (

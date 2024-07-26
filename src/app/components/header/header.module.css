@@ -43,7 +43,7 @@
     .internalctt{
         justify-content: center;
         align-items: center;
-        max-width: 380px;
+        max-width: 350px;
         background-color: rgba(0, 0, 0, 0.8); /* Fundo 80% preto */
         top: 10px; /* Posiciona 120px do topo */
         left: 50%; /* Centraliza horizontalmente */

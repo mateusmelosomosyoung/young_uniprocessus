@@ -16,7 +16,7 @@ const HeaderModule = () => {
                         <div className={styles.divfbt1}>
                             <Image src={'/icons/x.png'} alt={'Ícone x para fechar'} className={styles.imgocmnclose} onClick={() => setShowContent(false)} height={32}  width={32}/> 
                         </div>
-                        <FormModule withTitle='true' text='Garanta sua vaga'/>
+                        <FormModule withTitle='true' text='Garanta sua vaga'  withCourse='true'/>
                     </div>
                 </div>
             }

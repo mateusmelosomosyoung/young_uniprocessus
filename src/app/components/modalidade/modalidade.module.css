@@ -58,11 +58,11 @@
 
 @media(max-width:600px){
     .mdlcard{
-        width: 380px;
+        width: 350px;
         height: 600px;
     }
     .mdlcard2{
-        width: 380px;
+        width: 350px;
         height: 600px;
     }
 }

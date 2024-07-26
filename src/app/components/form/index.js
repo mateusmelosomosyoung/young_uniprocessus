@@ -38,6 +38,7 @@ const FormModule = ( {withTitle, text, withCourse} ) => {
   useEffect(() => {
     console.log('checkMkt', checkMkt)
   }, [checkMkt])
+  
   return (
     <>
       <form onSubmit={handleSubmit} className="formgnr">

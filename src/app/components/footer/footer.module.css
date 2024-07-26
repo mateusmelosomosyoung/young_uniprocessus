@@ -30,12 +30,20 @@
 .ftcttcol{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap:48px;
+}
+
+.frmcolpg{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:8px;
 }
 
 @media(max-width: 600px){
     .footer{
-        max-width: 380px;
+        max-width: 350px;
         padding: 48px 0;
     }
 }
@@ -46,5 +54,15 @@
         align-items: center;
         padding: 64px 16px;
         
+    }
+    .cttfooter{
+        justify-content: center;
+    }
+    .ftcttcol{
+        align-items: center;
+    }
+    .frmcolpg{
+        align-items: center;
+        text-align: center;
     }
 }

@@ -1,8 +1,8 @@
-import React from "react"
+import React, {useState, forwardRef} from "react"
 import styles from './modalidade.module.css'
 import Image from "next/image"
 
-const Modalidade = () => {
+const Modalidade = forwardRef((props, ref) => {
 
     const content1 = [
         {
@@ -37,7 +37,7 @@ const Modalidade = () => {
 
 
     return (<>
-        <div className="mmdvc">
+        <div className="mmdvc" ref={ref}>
             <div className={styles.cttmdl}>
                 <div className={styles.mdlcard}>
                     <h1>Ensino a Distância</h1>
@@ -72,7 +72,7 @@ const Modalidade = () => {
             </div>
         </div>
     </>)
-}
+})
 
 Modalidade.displayName = 'Modalidade'
 export default Modalidade

@@ -1,8 +1,8 @@
-import React from "react"
+import React, {forwardRef} from "react"
 import styles from './diferencial.module.css'
 import Image from "next/image"
 
-const Diferencial = () => {
+const Diferencial = forwardRef((props, ref) => {
 
     const content1 = [
         {
@@ -35,7 +35,7 @@ const Diferencial = () => {
     ]
 
     return (<>
-        <div className="mmdvc bgclrb">
+        <div className="mmdvc bgclrb" ref={ref}>
             <div className={styles.cttdfr}>
                 <div className="frmcol">
                     <h1 className="clry">Por Que Escolher a UniProcessus?</h1>
@@ -70,7 +70,7 @@ const Diferencial = () => {
             </div>
         </div>
     </>)
-}
+})
 
 Diferencial.displayName = 'Diferencial'
 export default Diferencial

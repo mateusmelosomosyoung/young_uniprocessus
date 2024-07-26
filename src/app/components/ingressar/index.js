@@ -1,8 +1,8 @@
-import React from "react"
+import React, {useState, forwardRef} from "react"
 import styles from './ingressar.module.css'
 import Image from "next/image"
 
-const Ingressar = () => {
+const Ingressar = forwardRef((props, ref) => {
 
     const content = [
         {
@@ -32,7 +32,7 @@ const Ingressar = () => {
     ]
 
     return (<>
-        <div className="mmdvc">
+        <div className="mmdvc" ref={ref}>
             <div className={styles.cttigrs}>
                 <h1 className="clrb">Como Ingressar na UniProcessus</h1>
                 <div className={styles.itctts}>
@@ -48,11 +48,11 @@ const Ingressar = () => {
                         </div>
                     ))}
                 </div>
-                <button className="bttpblue">INSCREVA-SE AGORA</button>
+                <button className="bttpblue">INSCREVA-SE</button>
             </div>
         </div>
     </>)
-}
+})
 
 Ingressar.displayName = 'Ingressar'
 export default Ingressar

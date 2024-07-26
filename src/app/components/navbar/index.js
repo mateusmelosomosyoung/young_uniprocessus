@@ -3,19 +3,18 @@ import { useState } from 'react'
 import styles from './navbar.module.css'
 import Image from "next/image"
 
-const Navbar = ({ scrollToRef, sobreRef, investimentoRef, profsRef, contatoRef }) => {
+const Navbar = ({ scrollToRef, cursosRef, diferencialRef, ingressarRef, modalidadesRef }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => {
     setIsOpen(!isOpen)
   }
 
-
   const itemList = [
-    { text: "CURSOS" },
-    { text: "DIFERENCIAIS" },
-    { text: "COMO INGRESSAR" },
-    { text: "MODALIDADES" }
+    { text: "CURSOS", ref: cursosRef },
+    { text: "DIFERENCIAIS", ref: diferencialRef },
+    { text: "COMO INGRESSAR", ref: ingressarRef },
+    { text: "MODALIDADES", ref: modalidadesRef }
   ]
 
   return (
@@ -23,7 +22,7 @@ const Navbar = ({ scrollToRef, sobreRef, investimentoRef, profsRef, contatoRef }
       <nav className={styles.customnavbar}>
         <div className={styles.cstnvbitem}>
           <div className={styles.cstimgbtfmb}>
-            <Image src={'/marca/logo.png'} alt='Uniprocessus Logo' className={styles.cstimg} height={64}  width={201}/>
+            <Image src={'/marca/logoP.svg'} alt='Uniprocessus Logo' className={styles.cstimg} height={64}  width={201}/>
             {isOpen ? <Image src={'/icons/x.png'} alt={'Ícone x para fechar'} className={styles.imgocmnclose} onClick={toggle} height={32}  width={32}/> : <Image src={'/icons/menu.png'} alt={'Ícone para abrir'} className={styles.imgocmnopen} onClick={toggle} height={18}  width={36}/>}
           </div>
           
@@ -31,11 +30,11 @@ const Navbar = ({ scrollToRef, sobreRef, investimentoRef, profsRef, contatoRef }
             <ul className={styles.cstnvbir}>
               {itemList.map((item, index) => (
                 <li key={index}>
-                  <a className={styles.navlink}>{item.text}</a>
+                  <a className={styles.navlink} onClick={() => scrollToRef(item.ref, 100)}>{item.text}</a>
                 </li>
               ))}
             </ul>
-            <button onClick={() => scrollToRef(contatoRef)} className='bttp'>INSCREVA-SE</button>
+            <button className='bttp'>INSCREVA-SE</button>
           </div>
 
           {isOpen && <>
@@ -43,19 +42,18 @@ const Navbar = ({ scrollToRef, sobreRef, investimentoRef, profsRef, contatoRef }
               <ul className={styles.cstnvhmb}>
                 {itemList.map((item, index) => (
                   <li key={index}>
-                    <a className={styles.navlink}>{item.text}</a>
+                    <a className={styles.navlink} onClick={() => { scrollToRef(item.ref, 100); toggle(); }}>{item.text}</a>
                   </li>
                 ))}
               </ul>
               <div className={styles.divfbpc}>
-                <button onClick={() => scrollToRef(contatoRef)} className='bttp'>INSCREVA-SE</button>
+                <button  className='bttp'>INSCREVA-SE</button>
               </div>
             </div>
             
           </>}
         </div>
       </nav>
-
     </>
   )
 }
