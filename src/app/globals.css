@@ -42,18 +42,22 @@ body.font-loaded {
 
 h1{
   font-size: 48px;
+  font-weight: 700 !important;
 }
 
 h2{
   font-size: 40px;
+  font-weight: 700 !important;
 }
 
 h3{
   font-size: 36px;
+  font-weight: 700 !important;
 }
 
 h4{
   font-size: 24px;
+  font-weight: 700 !important;
 }
 
 .bttp{
@@ -208,6 +212,17 @@ h4{
 }
 .ftsz14{
   font-size: 14px;
+}
+
+.crspointer{
+  cursor:pointer;
+}
+
+.mdlbtcls{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 @media(max-width:1300px){

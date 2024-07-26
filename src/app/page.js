@@ -14,8 +14,6 @@ import Script from 'next/script'
 
 export default function Home() {
 
-      
-
   const cursosRef = useRef(null)
   const diferencialRef = useRef(null)
   const ingressarRef = useRef(null)
@@ -56,12 +54,20 @@ export default function Home() {
       <Diferencial 
         ref={diferencialRef}/>
       <Ingressar 
-        ref={ingressarRef}/>
-      <Diplomacao />
+        ref={ingressarRef}
+        scrollToRef={scrollToRef}
+        contatoRef={contatoRef}
+      />
+      <Diplomacao 
+        scrollToRef={scrollToRef}
+        contatoRef={contatoRef}
+      />
       <Modalidade 
         ref={modalidadesRef}/>
-      <Contato />
-      <FooterModule />
+      <Contato 
+        ref={contatoRef}
+      />
+      <FooterModule/>
     </main>
   )
 }

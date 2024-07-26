@@ -44,7 +44,7 @@
 @media(max-width:600px){
 
     .dplcard{
-        max-width: 350px;
+        width: 350px;
     }
 }
 @media(max-width:1000px){
@@ -55,6 +55,7 @@
     .dplcard{
         transform: translateX(0);
         transform: translateY(350px);
+        max-width: 546px;
     }
     .formbl{
         display: flex;

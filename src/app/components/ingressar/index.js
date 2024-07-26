@@ -1,8 +1,8 @@
-import React, {useState, forwardRef} from "react"
+import React, {forwardRef} from "react"
 import styles from './ingressar.module.css'
 import Image from "next/image"
 
-const Ingressar = forwardRef((props, ref) => {
+const Ingressar = forwardRef(({ scrollToRef, contatoRef }, ref) => {
 
     const content = [
         {
@@ -48,7 +48,7 @@ const Ingressar = forwardRef((props, ref) => {
                         </div>
                     ))}
                 </div>
-                <button className="bttpblue">INSCREVA-SE</button>
+                <button className="bttpblue" onClick={() => scrollToRef(contatoRef, 100)}>INSCREVA-SE</button>
             </div>
         </div>
     </>)

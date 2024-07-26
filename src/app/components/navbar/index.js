@@ -2,12 +2,25 @@
 import { useState } from 'react'
 import styles from './navbar.module.css'
 import Image from "next/image"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Modal } from 'react-bootstrap'
+import FormModule from "../form"
 
 const Navbar = ({ scrollToRef, cursosRef, diferencialRef, ingressarRef, modalidadesRef }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
   const toggle = () => {
     setIsOpen(!isOpen)
+  }
+
+  
+  const handleShow = () => {
+    setShowModal(true)
+  }
+
+  const handleClose = () => {
+      setShowModal(false)
   }
 
   const itemList = [
@@ -30,11 +43,11 @@ const Navbar = ({ scrollToRef, cursosRef, diferencialRef, ingressarRef, modalida
             <ul className={styles.cstnvbir}>
               {itemList.map((item, index) => (
                 <li key={index}>
-                  <a className={styles.navlink} onClick={() => scrollToRef(item.ref, 100)}>{item.text}</a>
+                  <div className={styles.navlink} onClick={() => scrollToRef(item.ref, 100)}>{item.text}</div>
                 </li>
               ))}
             </ul>
-            <button className='bttp'>INSCREVA-SE</button>
+            <button className='bttp' onClick={()=> {setShowModal(true)}}>INSCREVA-SE</button>
           </div>
 
           {isOpen && <>
@@ -42,18 +55,27 @@ const Navbar = ({ scrollToRef, cursosRef, diferencialRef, ingressarRef, modalida
               <ul className={styles.cstnvhmb}>
                 {itemList.map((item, index) => (
                   <li key={index}>
-                    <a className={styles.navlink} onClick={() => { scrollToRef(item.ref, 100); toggle(); }}>{item.text}</a>
+                    <div className={styles.navlink} onClick={() => { scrollToRef(item.ref, 100); toggle(); }}>{item.text}</div>
                   </li>
                 ))}
               </ul>
               <div className={styles.divfbpc}>
-                <button  className='bttp'>INSCREVA-SE</button>
+                <button  className='bttp' onClick={()=> {setShowModal(true)}}>INSCREVA-SE</button>
               </div>
             </div>
             
           </>}
         </div>
       </nav>
+      
+      <Modal show={showModal} onHide={handleClose}>
+          <Modal.Body>
+              <div className="mdlbtcls">
+                  <Image src={'/icons/x.png'} alt={'Ícone x para fechar'} className="crspointer" onClick={handleClose} height={32}  width={32}/>
+              </div>
+              <FormModule withCourse={true} />
+          </Modal.Body>
+      </Modal>
     </>
   )
 }

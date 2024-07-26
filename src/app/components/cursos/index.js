@@ -1,16 +1,30 @@
 'use client'
-import React, {useState, forwardRef} from "react"
+import React, { useState, forwardRef } from "react"
 import styles from './cursos.module.css'
 import Image from "next/image"
 import { cursos } from "../../data/cursosData"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Modal } from 'react-bootstrap'
+import FormModule from "../form"
 
 const Cursos = forwardRef((props, ref) => { 
 
     const [option, setOption] = useState('')
     const [showAll, setShowAll] = useState(false)
+    const [showModal, setShowModal] = useState(false)
 
     const toggleShowAll = () => {
-        setShowAll(prevShowAll => !prevShowAll)
+        setShowAll(!showAll)
+    }
+
+    const handleShow = (curso) => {
+        setOption(curso)
+        setShowModal(true)
+    }
+
+    const handleClose = () => {
+        setOption('')
+        setShowModal(false)
     }
 
     return (
@@ -43,7 +57,7 @@ const Cursos = forwardRef((props, ref) => {
                                     </div>
                                     <br/>
                                 </div>
-                                <button className="bttcard" onClick={() => {setOption(curso.curso)}}>INSCREVA-SE</button>
+                                <button className="bttcard" onClick={() => handleShow(curso.curso)}>INSCREVA-SE</button>
                             </div>
                         ))}
                     </div>
@@ -52,6 +66,15 @@ const Cursos = forwardRef((props, ref) => {
                     </button>
                 </div>
             </div>
+
+            <Modal show={showModal} onHide={handleClose}>
+                <Modal.Body>
+                    <div className="mdlbtcls">
+                        <Image src={'/icons/x.png'} alt={'Ícone x para fechar'} className="crspointer" onClick={handleClose} height={32}  width={32}/>
+                    </div>
+                    <FormModule withCourse={true} curso={option}/>
+                </Modal.Body>
+            </Modal>
         </>
     )
 })

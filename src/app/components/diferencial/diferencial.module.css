@@ -17,6 +17,10 @@
     color:white;
 }
 
+.cttdfr p{
+    margin-bottom: 0;
+}
+
 @media(max-width: 1000px){
 
     .cttdfr{

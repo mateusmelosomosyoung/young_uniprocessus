@@ -2,49 +2,73 @@
 import { useState, useEffect } from 'react'
 import styles from './formmodule.module.css'
 import { cursos } from "../../data/cursosData"
+import axios from 'axios'
 
-const FormModule = ( {withTitle, text, withCourse} ) => {
+const FormModule = ( {withTitle, text, withCourse, curso} ) => {
   const [nome, setNome] = useState('')
-  const [telefone, setTelefone] = useState('')
+  const [whatsapp, setWhatsapp] = useState('')
   const [email, setEmail] = useState('')
   const [checkMkt, setCheckMkt] = useState(true)
   const [option, setOption] = useState('')
+  const [loading, setLoading] = useState('')
 
   useEffect(() => {
-    console.log(option)
-  }, [option])
+    if (curso) {
+      setOption(curso)
+    }
+  }, [curso])
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    // Aqui você pode adicionar a lógica para enviar os dados do formulário
-    console.log({
-      nome,
-      telefone,
-      email,
-      checkMkt,
-      option
-    })
-    // Resetar os campos após enviar o formulário, se necessário
-    setNome('')
-    setTelefone('')
-    setEmail('')
-    setCheckMkt(true)
-  }
-  
   const handleChange = (e) => {
     setOption(e.target.value)
   }
 
-  useEffect(() => {
-    console.log('checkMkt', checkMkt)
-  }, [checkMkt])
+  
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+
+    const apiKey = `${process.env.NEXT_PUBLIC_API_KEY}`
+
+    const url = `${process.env.NEXT_PUBLIC_URL_API}`
+
+    const data = {
+      nome: nome,
+      whatsapp: whatsapp,
+      email: email
+    }
+    if(checkMkt){
+      data.checkMkt = checkMkt
+    }
+    if (option) {
+      data.curso = option
+    }
+
+    setLoading(true)
+
+    try {
+      const result = await axios.post(url, data,{
+        headers: {
+          'apikey': apiKey
+        }
+      })
+      alert('Dados recebidos com sucesso!')
+      setNome('')
+      setWhatsapp('')
+      setEmail('')
+      setCheckMkt(true)
+    } catch (error) {
+      alert(error.message)
+    } finally {
+      setLoading(false)
+    }
+  }
+
   
   return (
     <>
       <form onSubmit={handleSubmit} className="formgnr">
         {withTitle && <h2>{text}</h2>}
         <input className='lblwbb' type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder='Nome:' required />
-        <input className='lblwbb' type="tel" value={telefone} onChange={(e) => setTelefone(e.target.value)} placeholder='Whatsapp:' required />
+        <input className='lblwbb' type="tel" value={whatsapp} onChange={(e) => setWhatsapp(e.target.value)} placeholder='Whatsapp:' required />
         <input className='lblwbb' type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='E-mail:' required />
         {withCourse &&
           <select className='lblwbb' value={option} onChange={handleChange}>
@@ -65,7 +89,7 @@ const FormModule = ( {withTitle, text, withCourse} ) => {
           {checkMkt ? "Aceito receber informações e promoções da Uniprocessus" : "Não quero receber informações e promoções da Uniprocessus"}
         </label>
         <div className={styles.divfbt}>
-          <button type="submit" className='bttp'>INSCREVA-SE</button>
+          <button type="submit" disabled={loading} className='bttp'>{loading ? "Processando..." : "INSCREVA-SE"}</button>
         </div>
       </form>
     </>
