@@ -51,10 +51,12 @@ const Cursos = forwardRef((props, ref) => {
                                         <Image src={'/icons/certificate.png'} alt={'Ícone certificado'} className={styles.imgicon} height={20} width={20}/>
                                         <p className="ftsz14">{curso.certificado}</p>
                                     </div>
-                                    <div className={styles.divitimg}>
-                                        <Image src={'/icons/hourglass.png'} alt={'Ícone ampulheta'} className={styles.imgicon} height={20} width={20}/>
-                                        <p className="ftsz14">{curso.turno}</p>
-                                    </div>
+                                    {curso.turno && 
+                                        <div className={styles.divitimg}>
+                                            <Image src={'/icons/hourglass.png'} alt={'Ícone ampulheta'} className={styles.imgicon} height={20} width={20}/>
+                                            <p className="ftsz14">{curso.turno}</p>
+                                        </div>
+                                    }
                                     <br/>
                                 </div>
                                 <button className="bttcard" onClick={() => handleShow(curso.curso)}>INSCREVA-SE</button>
